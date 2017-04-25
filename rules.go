@@ -60,7 +60,7 @@ func MinValue(minValue float64) func(name, input string) error {
 		if err != nil {
 			return err
 		}
-		if value > minValue {
+		if value < minValue {
 			return errors.New(fmt.Sprintf("Minimum allowed value of parameter '%v' is %v", name, minValue))
 		}
 		return nil
